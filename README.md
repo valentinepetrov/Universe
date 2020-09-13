@@ -1,4 +1,4 @@
-* [**The Universe 1**](https://valentinepetrov.github.io/Universe/)
+* [**The Universe 1**](https://valentinepetrov.github.io/Universe/) (pureCss)
   * Without generation of stars
   * May need scaling
   * Buttons *Start* do not work
