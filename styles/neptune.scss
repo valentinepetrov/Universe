@@ -1,0 +1,293 @@
+.planet-neptune-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  transform: skewY(14deg);
+}
+
+.planet-revers-skew {
+  transform: skewY(-14deg);
+}
+
+.planet-neptune-ellipse {
+  animation-name: planet-neptune-ellipse;
+  animation-duration: 601s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.planet-neptune-scaling {
+  animation-name: planet-neptune-scaling;
+  animation-duration: 601s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+.neptune {
+  width: 190px;
+  height: 190px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  //box-shadow: -20px -20px 50px 2px #000 inset;
+  box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  background-image: url("../pictures/neptuneExecuted.jpg");
+  animation-name: planet-neptune-rotate-background;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.planet-svg-neptune {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  top: -434px;
+  left: -31px;
+  display: none;
+}
+
+.planet-neptune-ellipse:hover {
+  animation-play-state: paused;
+}
+
+.planet-neptune-ellipse:hover .planet-neptune-scaling {
+  animation-play-state: paused;
+}
+
+.planet-neptune-ellipse:hover .planet-svg-neptune {
+  display: inherit;
+}
+
+@keyframes planet-neptune-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+
+  100% {
+    background-position: 320px;
+  }
+}
+
+@keyframes planet-neptune-scaling {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes planet-neptune-ellipse {
+  from {
+    transform: rotate(0deg) translateX(690px) translateY(1010px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(690px) translateY(1010px) rotate(-360deg);
+  }
+}
+
+/* lines => */
+
+.planet-neptune-curveLine-4-4,
+.planet-neptune-curveLine-3-4,
+.planet-neptune-curveLine-2-4,
+.planet-neptune-curveLine-1-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: planet-neptune-appearingLine 1s linear forwards;
+}
+
+.planet-neptune-oneLine {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: planet-neptune-appearingLine 1s linear forwards;
+  animation-delay: 0.39s;
+}
+
+.planet-neptune-rectangleLongLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: planet-neptune-appearingLine 1s linear forwards;
+  animation-delay: 0.8s;
+}
+
+.planet-neptune-rectangleLongLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: planet-neptune-appearingLine 1s linear forwards;
+  animation-delay: 1s;
+}
+
+.planet-neptune-rectangleShortLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: planet-neptune-appearingLine 0.5s linear forwards;
+  animation-delay: 0.8s;
+}
+
+.planet-neptune-rectangleShortLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: planet-neptune-appearingLine 0.5s linear forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes planet-neptune-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* <= lines */
+
+/* text-in-the-window => */
+
+.planet-neptune-text-in-the-window {
+  position: absolute;
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #4bdc87;
+  top: -304px;
+  left: 170px;
+  width: 250px;
+  height: 130px;
+  overflow: hidden;
+  display: none;
+}
+
+.planet-neptune-p-in-the-window {
+  font-size: 27px;
+  overflow: hidden;
+  border-right: 0.15em solid #4bdc87;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: none;
+  animation-delay: 3s;
+  display: none;
+}
+
+.planet-neptune-ellipse:hover .planet-neptune-text-in-the-window {
+  display: inherit;
+}
+
+.planet-neptune-ellipse:hover .planet-neptune-p-in-the-window {
+  display: inherit;
+  animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 0.01;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+.planet-neptune-button {
+  position: absolute;
+  bottom: 10px;
+  left: 48px;
+  margin: 0 0;
+  padding: 0px 6px;
+  border: 0;
+  background: red;
+  border-radius: 4px;
+  box-shadow: 0 6px 0 #920606;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.planet-neptune-text-in-the-bottom {
+  margin: 0 0;
+  font-size: 44px;
+}
+
+.planet-neptune-text-in-the-bottom {
+  animation-name: lighting;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.planet-neptune-ellipse:hover .planet-neptune-button {
+  display: inherit;
+  animation-name: button-appearing;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: forwards;
+}
+
+@keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.01;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: black;
+  }
+
+  50% {
+    color: #fd7878;
+  }
+
+  100% {
+    color: black;
+  }
+}
+
+.planet-neptune-button:active {
+  box-shadow: 0 2px 0 #920606;
+  transform: translateY(3px);
+}
+
+/* <= text-in-the-window */

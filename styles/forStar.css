@@ -1,0 +1,3163 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* for assistant => */
+.assistant {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 30vw;
+  height: 38vh;
+  max-width: 550px;
+  max-height: 600px;
+  overflow: hidden;
+  background-image: url("../pictures/theMainframe.svg");
+  background-size: cover;
+  padding-top: 5vh;
+  padding-right: 2vw;
+  padding-bottom: 5vh;
+  padding-left: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.assistant-text {
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #b7deec;
+  margin-left: 2vw;
+  overflow: hidden;
+}
+
+.e-v-e {
+  width: 150px;
+  min-width: 150px;
+  height: 250px;
+  min-height: 250px;
+  background-image: url("../pictures/assistant2.gif");
+  background-position: top center;
+  -webkit-box-shadow: 0 0 20px 5px #b7deec inset, 0 0 20px 2px #b7deec;
+          box-shadow: 0 0 20px 5px #b7deec inset, 0 0 20px 2px #b7deec;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+@media only all and (max-height: 900px) {
+  .e-v-e {
+    height: 180px;
+    min-height: 150px;
+  }
+}
+
+@media only all and (max-width: 1280px) {
+  .e-v-e {
+    display: none;
+  }
+  .assistant {
+    padding-left: 8vw;
+  }
+}
+
+@media only all and (max-width: 640px) {
+  .assistant {
+    display: none;
+  }
+}
+
+/* <= for assistant */
+.the-sun {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  top: 45vh;
+  left: 45vw;
+  background-image: url(../pictures/theSun3.gif);
+  background-size: cover;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  border-radius: 50%;
+}
+
+.planet-mercury-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  -webkit-transform: skewY(14deg);
+          transform: skewY(14deg);
+}
+
+.planet-revers-skew {
+  -webkit-transform: skewY(-14deg);
+          transform: skewY(-14deg);
+}
+
+.planet-mercury-ellipse {
+  -webkit-animation-name: planet-mercury-ellipse;
+          animation-name: planet-mercury-ellipse;
+  -webkit-animation-duration: 8.8s;
+          animation-duration: 8.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-mercury-scaling {
+  -webkit-animation-name: planet-mercury-scaling;
+          animation-name: planet-mercury-scaling;
+  -webkit-animation-duration: 8.8s;
+          animation-duration: 8.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: relative;
+}
+
+.mercury {
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  background-image: url("../pictures/mercuryExecuted.jpg");
+  -webkit-animation-name: planet-mercury-rotate-background;
+          animation-name: planet-mercury-rotate-background;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-svg-mercury {
+  position: fixed;
+  width: 285px;
+  height: 285px;
+  top: -175px;
+  left: 0px;
+  display: none;
+}
+
+.planet-mercury-ellipse:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-mercury-ellipse:hover .planet-mercury-scaling {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-mercury-ellipse:hover .planet-svg-mercury {
+  display: inherit;
+}
+
+@-webkit-keyframes planet-mercury-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@keyframes planet-mercury-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@-webkit-keyframes planet-mercury-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes planet-mercury-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes planet-mercury-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(220px) translateY(40px) rotate(0deg);
+            transform: rotate(0deg) translateX(220px) translateY(40px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(220px) translateY(40px) rotate(-360deg);
+            transform: rotate(360deg) translateX(220px) translateY(40px) rotate(-360deg);
+  }
+}
+
+@keyframes planet-mercury-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(220px) translateY(40px) rotate(0deg);
+            transform: rotate(0deg) translateX(220px) translateY(40px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(220px) translateY(40px) rotate(-360deg);
+            transform: rotate(360deg) translateX(220px) translateY(40px) rotate(-360deg);
+  }
+}
+
+/* lines => */
+.planet-mercury-curveLine-4-4,
+.planet-mercury-curveLine-3-4,
+.planet-mercury-curveLine-2-4,
+.planet-mercury-curveLine-1-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mercury-appearingLine 1s linear forwards;
+          animation: planet-mercury-appearingLine 1s linear forwards;
+}
+
+.planet-mercury-oneLine {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mercury-appearingLine 1s linear forwards;
+          animation: planet-mercury-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+}
+
+.planet-mercury-rectangleLongLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mercury-appearingLine 1s linear forwards;
+          animation: planet-mercury-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-mercury-rectangleLongLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mercury-appearingLine 1s linear forwards;
+          animation: planet-mercury-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.planet-mercury-rectangleShortLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mercury-appearingLine 0.5s linear forwards;
+          animation: planet-mercury-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-mercury-rectangleShortLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mercury-appearingLine 0.5s linear forwards;
+          animation: planet-mercury-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes planet-mercury-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes planet-mercury-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* <= lines */
+/* text-in-the-window => */
+.planet-mercury-text-in-the-window {
+  position: absolute;
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #4bdc87;
+  top: -124px;
+  left: 81px;
+  width: 101px;
+  height: 55px;
+  overflow: hidden;
+  display: none;
+}
+
+.planet-mercury-p-in-the-window {
+  font-size: 11px;
+  overflow: hidden;
+  border-right: 0.15em solid #4bdc87;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: none;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  display: none;
+}
+
+.planet-mercury-ellipse:hover .planet-mercury-text-in-the-window {
+  display: inherit;
+}
+
+.planet-mercury-ellipse:hover .planet-mercury-p-in-the-window {
+  display: inherit;
+  -webkit-animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@-webkit-keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+.planet-mercury-button {
+  position: absolute;
+  bottom: 7px;
+  left: 21px;
+  margin: 0 0;
+  padding: 0px 6px;
+  border: 0;
+  background: red;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 0 #920606;
+          box-shadow: 0 3px 0 #920606;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.planet-mercury-text-in-the-bottom {
+  margin: 0 0;
+  font-size: 16px;
+}
+
+.planet-mercury-text-in-the-bottom {
+  -webkit-animation-name: lighting;
+          animation-name: lighting;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.planet-mercury-ellipse:hover .planet-mercury-button {
+  display: inherit;
+  -webkit-animation-name: button-appearing;
+          animation-name: button-appearing;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: forwards;
+          animation-iteration-count: forwards;
+}
+
+@-webkit-keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.planet-mercury-button:active {
+  -webkit-box-shadow: 0 1px 0 #920606;
+          box-shadow: 0 1px 0 #920606;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+/* <= text-in-the-window */
+.planet-venus-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  -webkit-transform: skewY(14deg);
+          transform: skewY(14deg);
+}
+
+.planet-revers-skew {
+  -webkit-transform: skewY(-14deg);
+          transform: skewY(-14deg);
+}
+
+.planet-venus-ellipse {
+  -webkit-animation-name: planet-venus-ellipse;
+          animation-name: planet-venus-ellipse;
+  -webkit-animation-duration: 22.5s;
+          animation-duration: 22.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-venus-scaling {
+  -webkit-animation-name: planet-venus-scaling;
+          animation-name: planet-venus-scaling;
+  -webkit-animation-duration: 22.5s;
+          animation-duration: 22.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: relative;
+}
+
+.venus {
+  width: 135px;
+  height: 135px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  background-image: url("../pictures/venusExecuted.jpg");
+  -webkit-animation-name: planet-venus-rotate-background;
+          animation-name: planet-venus-rotate-background;
+  -webkit-animation-duration: 24s;
+          animation-duration: 24s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-svg-venus {
+  position: fixed;
+  width: 513px;
+  height: 513px;
+  top: -316px;
+  left: -24px;
+  display: none;
+}
+
+.planet-venus-ellipse:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-venus-ellipse:hover .planet-venus-scaling {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-venus-ellipse:hover .planet-svg-venus {
+  display: inherit;
+}
+
+@-webkit-keyframes planet-venus-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@keyframes planet-venus-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@-webkit-keyframes planet-venus-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes planet-venus-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes planet-venus-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(280px) translateY(170px) rotate(0deg);
+            transform: rotate(0deg) translateX(280px) translateY(170px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(280px) translateY(170px) rotate(-360deg);
+            transform: rotate(360deg) translateX(280px) translateY(170px) rotate(-360deg);
+  }
+}
+
+@keyframes planet-venus-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(280px) translateY(170px) rotate(0deg);
+            transform: rotate(0deg) translateX(280px) translateY(170px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(280px) translateY(170px) rotate(-360deg);
+            transform: rotate(360deg) translateX(280px) translateY(170px) rotate(-360deg);
+  }
+}
+
+/* lines => */
+.planet-venus-curveLine-4-4,
+.planet-venus-curveLine-3-4,
+.planet-venus-curveLine-2-4,
+.planet-venus-curveLine-1-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-venus-appearingLine 1s linear forwards;
+          animation: planet-venus-appearingLine 1s linear forwards;
+}
+
+.planet-venus-oneLine {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-venus-appearingLine 1s linear forwards;
+          animation: planet-venus-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+}
+
+.planet-venus-rectangleLongLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-venus-appearingLine 1s linear forwards;
+          animation: planet-venus-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-venus-rectangleLongLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-venus-appearingLine 1s linear forwards;
+          animation: planet-venus-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.planet-venus-rectangleShortLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-venus-appearingLine 0.5s linear forwards;
+          animation: planet-venus-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-venus-rectangleShortLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-venus-appearingLine 0.5s linear forwards;
+          animation: planet-venus-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes planet-venus-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes planet-venus-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* <= lines */
+/* text-in-the-window => */
+.planet-venus-text-in-the-window {
+  position: absolute;
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #4bdc87;
+  top: -222px;
+  left: 122px;
+  width: 186px;
+  height: 97px;
+  overflow: hidden;
+  display: none;
+}
+
+.planet-venus-p-in-the-window {
+  font-size: 20px;
+  overflow: hidden;
+  border-right: 0.15em solid #4bdc87;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: none;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  display: none;
+}
+
+.planet-venus-ellipse:hover .planet-venus-text-in-the-window {
+  display: inherit;
+}
+
+.planet-venus-ellipse:hover .planet-venus-p-in-the-window {
+  display: inherit;
+  -webkit-animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+.planet-venus-button {
+  position: absolute;
+  bottom: 10px;
+  left: 36px;
+  margin: 0 0;
+  padding: 0px 6px;
+  border: 0;
+  background: red;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 0 #920606;
+          box-shadow: 0 6px 0 #920606;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.planet-venus-text-in-the-bottom {
+  margin: 0 0;
+  font-size: 2em;
+}
+
+.planet-venus-text-in-the-bottom {
+  -webkit-animation-name: lighting;
+          animation-name: lighting;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.planet-venus-ellipse:hover .planet-venus-button {
+  display: inherit;
+  -webkit-animation-name: button-appearing;
+          animation-name: button-appearing;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: forwards;
+          animation-iteration-count: forwards;
+}
+
+@keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.planet-venus-button:active {
+  -webkit-box-shadow: 0 2px 0 #920606;
+          box-shadow: 0 2px 0 #920606;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+/* <= text-in-the-window */
+.planet-earth-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  -webkit-transform: skewY(14deg);
+          transform: skewY(14deg);
+}
+
+.planet-revers-skew {
+  -webkit-transform: skewY(-14deg);
+          transform: skewY(-14deg);
+}
+
+.planet-earth-ellipse {
+  -webkit-animation-name: planet-earth-ellipse;
+          animation-name: planet-earth-ellipse;
+  -webkit-animation-duration: 36.5s;
+          animation-duration: 36.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-earth-scaling {
+  -webkit-animation-name: planet-earth-scaling;
+          animation-name: planet-earth-scaling;
+  -webkit-animation-duration: 36.5s;
+          animation-duration: 36.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: relative;
+}
+
+.earth {
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  background-image: url("../pictures/earthExecuted.jpg");
+  -webkit-animation-name: planet-earth-rotate-background;
+          animation-name: planet-earth-rotate-background;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-svg-earth {
+  position: fixed;
+  width: 570px;
+  height: 570px;
+  top: -352px;
+  left: -26px;
+  display: none;
+}
+
+.planet-earth-ellipse:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-earth-ellipse:hover .planet-earth-scaling {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-earth-ellipse:hover .planet-svg-earth {
+  display: inherit;
+}
+
+@-webkit-keyframes planet-earth-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@keyframes planet-earth-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@-webkit-keyframes planet-earth-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes planet-earth-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes planet-earth-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(340px) translateY(320px) rotate(0deg);
+            transform: rotate(0deg) translateX(340px) translateY(320px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(340px) translateY(320px) rotate(-360deg);
+            transform: rotate(360deg) translateX(340px) translateY(320px) rotate(-360deg);
+  }
+}
+
+@keyframes planet-earth-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(340px) translateY(320px) rotate(0deg);
+            transform: rotate(0deg) translateX(340px) translateY(320px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(340px) translateY(320px) rotate(-360deg);
+            transform: rotate(360deg) translateX(340px) translateY(320px) rotate(-360deg);
+  }
+}
+
+/* lines => */
+.planet-earth-curveLine-4-4,
+.planet-earth-curveLine-3-4,
+.planet-earth-curveLine-2-4,
+.planet-earth-curveLine-1-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-earth-appearingLine 1s linear forwards;
+          animation: planet-earth-appearingLine 1s linear forwards;
+}
+
+.planet-earth-oneLine {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-earth-appearingLine 1s linear forwards;
+          animation: planet-earth-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+}
+
+.planet-earth-rectangleLongLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-earth-appearingLine 1s linear forwards;
+          animation: planet-earth-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-earth-rectangleLongLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-earth-appearingLine 1s linear forwards;
+          animation: planet-earth-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.planet-earth-rectangleShortLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-earth-appearingLine 0.5s linear forwards;
+          animation: planet-earth-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-earth-rectangleShortLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-earth-appearingLine 0.5s linear forwards;
+          animation: planet-earth-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes planet-earth-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes planet-earth-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* <= lines */
+/* text-in-the-window => */
+.planet-earth-text-in-the-window {
+  position: absolute;
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #4bdc87;
+  top: -248px;
+  left: 136px;
+  width: 205px;
+  height: 110px;
+  overflow: hidden;
+  display: none;
+}
+
+.planet-earth-p-in-the-window {
+  font-size: 1.4em;
+  overflow: hidden;
+  border-right: 0.15em solid #4bdc87;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: none;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  display: none;
+}
+
+.planet-earth-ellipse:hover .planet-earth-text-in-the-window {
+  display: inherit;
+}
+
+.planet-earth-ellipse:hover .planet-earth-p-in-the-window {
+  display: inherit;
+  -webkit-animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+.planet-earth-button {
+  position: absolute;
+  top: 58px;
+  left: 46px;
+  margin: 0 0;
+  padding: 0px 6px;
+  border: 0;
+  background: red;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 0 #920606;
+          box-shadow: 0 6px 0 #920606;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.planet-earth-text-in-the-bottom {
+  margin: 0 0;
+  font-size: 2em;
+}
+
+.planet-earth-text-in-the-bottom {
+  -webkit-animation-name: lighting;
+          animation-name: lighting;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.planet-earth-ellipse:hover .planet-earth-button {
+  display: inherit;
+  -webkit-animation-name: button-appearing;
+          animation-name: button-appearing;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: forwards;
+          animation-iteration-count: forwards;
+}
+
+@keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.planet-earth-button:active {
+  -webkit-box-shadow: 0 2px 0 #920606;
+          box-shadow: 0 2px 0 #920606;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+/* <= text-in-the-window */
+.planet-mars-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  -webkit-transform: skewY(14deg);
+          transform: skewY(14deg);
+}
+
+.planet-revers-skew {
+  -webkit-transform: skewY(-14deg);
+          transform: skewY(-14deg);
+}
+
+.planet-mars-ellipse {
+  -webkit-animation-name: planet-mars-ellipse;
+          animation-name: planet-mars-ellipse;
+  -webkit-animation-duration: 68.7s;
+          animation-duration: 68.7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-mars-scaling {
+  -webkit-animation-name: planet-mars-scaling;
+          animation-name: planet-mars-scaling;
+  -webkit-animation-duration: 68.7s;
+          animation-duration: 68.7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: relative;
+}
+
+.mars {
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  background-image: url("../pictures/marsExecuted.jpg");
+  -webkit-animation-name: planet-mars-rotate-background;
+          animation-name: planet-mars-rotate-background;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-svg-mars {
+  position: fixed;
+  width: 285px;
+  height: 285px;
+  top: -175px;
+  left: 0px;
+  display: none;
+}
+
+.planet-mars-ellipse:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-mars-ellipse:hover .planet-mars-scaling {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-mars-ellipse:hover .planet-svg-mars {
+  display: inherit;
+}
+
+@-webkit-keyframes planet-mars-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@keyframes planet-mars-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@-webkit-keyframes planet-mars-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes planet-mars-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes planet-mars-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(420px) translateY(460px) rotate(0deg);
+            transform: rotate(0deg) translateX(420px) translateY(460px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(420px) translateY(460px) rotate(-360deg);
+            transform: rotate(360deg) translateX(420px) translateY(460px) rotate(-360deg);
+  }
+}
+
+@keyframes planet-mars-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(420px) translateY(460px) rotate(0deg);
+            transform: rotate(0deg) translateX(420px) translateY(460px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(420px) translateY(460px) rotate(-360deg);
+            transform: rotate(360deg) translateX(420px) translateY(460px) rotate(-360deg);
+  }
+}
+
+/* lines => */
+.planet-mars-curveLine-4-4,
+.planet-mars-curveLine-3-4,
+.planet-mars-curveLine-2-4,
+.planet-mars-curveLine-1-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 1s linear forwards;
+          animation: planet-mars-appearingLine 1s linear forwards;
+}
+
+.planet-mars-oneLine {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 1s linear forwards;
+          animation: planet-mars-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+}
+
+.planet-mars-rectangleLongLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 1s linear forwards;
+          animation: planet-mars-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-mars-rectangleLongLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 1s linear forwards;
+          animation: planet-mars-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.planet-mars-rectangleShortLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 0.5s linear forwards;
+          animation: planet-mars-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-mars-rectangleShortLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 0.5s linear forwards;
+          animation: planet-mars-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes planet-mars-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes planet-mars-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* <= lines */
+/* text-in-the-window => */
+.planet-mars-text-in-the-window {
+  position: absolute;
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #4bdc87;
+  top: -123px;
+  left: 81px;
+  width: 101px;
+  height: 55px;
+  overflow: hidden;
+  display: none;
+}
+
+.planet-mars-p-in-the-window {
+  font-size: 11px;
+  overflow: hidden;
+  border-right: 0.15em solid #4bdc87;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: none;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  display: none;
+}
+
+.planet-mars-ellipse:hover .planet-mars-text-in-the-window {
+  display: inherit;
+}
+
+.planet-mars-ellipse:hover .planet-mars-p-in-the-window {
+  display: inherit;
+  -webkit-animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+.planet-mars-button {
+  position: absolute;
+  bottom: 7px;
+  left: 21px;
+  margin: 0 0;
+  padding: 0px 6px;
+  border: 0;
+  background: red;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 0 #920606;
+          box-shadow: 0 3px 0 #920606;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.planet-mars-text-in-the-bottom {
+  margin: 0 0;
+  font-size: 16px;
+}
+
+.planet-mars-text-in-the-bottom {
+  -webkit-animation-name: lighting;
+          animation-name: lighting;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.planet-mars-ellipse:hover .planet-mars-button {
+  display: inherit;
+  -webkit-animation-name: button-appearing;
+          animation-name: button-appearing;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: forwards;
+          animation-iteration-count: forwards;
+}
+
+@keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.planet-mars-button:active {
+  -webkit-box-shadow: 0 1px 0 #920606;
+          box-shadow: 0 1px 0 #920606;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+/* <= text-in-the-window */
+.planet-jupiter-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  -webkit-transform: skewY(14deg);
+          transform: skewY(14deg);
+}
+
+.planet-revers-skew {
+  -webkit-transform: skewY(-14deg);
+          transform: skewY(-14deg);
+}
+
+.planet-jupiter-ellipse {
+  -webkit-animation-name: planet-jupiter-ellipse;
+          animation-name: planet-jupiter-ellipse;
+  -webkit-animation-duration: 43s;
+          animation-duration: 43s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-jupiter-scaling {
+  -webkit-animation-name: planet-jupiter-scaling;
+          animation-name: planet-jupiter-scaling;
+  -webkit-animation-duration: 43s;
+          animation-duration: 43s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: relative;
+}
+
+.jupiter {
+  width: 280px;
+  height: 280px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  background-image: url("../pictures/jupiterExecuted.jpg");
+  -webkit-animation-name: planet-jupiter-rotate-background;
+          animation-name: planet-jupiter-rotate-background;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-svg-jupiter {
+  width: 1030px;
+  height: 1030px;
+  position: fixed;
+  top: -637px;
+  left: -46px;
+  display: none;
+}
+
+.planet-jupiter-ellipse:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-jupiter-ellipse:hover .planet-jupiter-scaling {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-jupiter-ellipse:hover .planet-svg-jupiter {
+  display: inherit;
+}
+
+@-webkit-keyframes planet-jupiter-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@keyframes planet-jupiter-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@-webkit-keyframes planet-jupiter-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes planet-jupiter-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes planet-jupiter-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(480px) translateY(610px) rotate(0deg);
+            transform: rotate(0deg) translateX(480px) translateY(610px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(480px) translateY(610px) rotate(-360deg);
+            transform: rotate(360deg) translateX(480px) translateY(610px) rotate(-360deg);
+  }
+}
+
+@keyframes planet-jupiter-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(480px) translateY(610px) rotate(0deg);
+            transform: rotate(0deg) translateX(480px) translateY(610px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(480px) translateY(610px) rotate(-360deg);
+            transform: rotate(360deg) translateX(480px) translateY(610px) rotate(-360deg);
+  }
+}
+
+/* lines => */
+.planet-jupiter-curveLine-4-4,
+.planet-jupiter-curveLine-3-4,
+.planet-jupiter-curveLine-2-4,
+.planet-jupiter-curveLine-1-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-jupiter-appearingLine 1s linear forwards;
+          animation: planet-jupiter-appearingLine 1s linear forwards;
+}
+
+.planet-jupiter-oneLine {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-jupiter-appearingLine 1s linear forwards;
+          animation: planet-jupiter-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+}
+
+.planet-jupiter-rectangleLongLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-jupiter-appearingLine 1s linear forwards;
+          animation: planet-jupiter-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-jupiter-rectangleLongLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-jupiter-appearingLine 1s linear forwards;
+          animation: planet-jupiter-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.planet-jupiter-rectangleShortLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-jupiter-appearingLine 0.5s linear forwards;
+          animation: planet-jupiter-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-jupiter-rectangleShortLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-jupiter-appearingLine 0.5s linear forwards;
+          animation: planet-jupiter-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes planet-jupiter-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes planet-jupiter-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* <= lines */
+/* text-in-the-window => */
+.planet-jupiter-text-in-the-window {
+  position: absolute;
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #4bdc87;
+  top: -444px;
+  left: 249px;
+  width: 370px;
+  height: 190px;
+  overflow: hidden;
+  display: none;
+}
+
+.planet-jupiter-p-in-the-window {
+  font-size: 35px;
+  overflow: hidden;
+  border-right: 0.15em solid #4bdc87;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: none;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  display: none;
+}
+
+.planet-jupiter-ellipse:hover .planet-jupiter-text-in-the-window {
+  display: inherit;
+}
+
+.planet-jupiter-ellipse:hover .planet-jupiter-p-in-the-window {
+  display: inherit;
+  -webkit-animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+.planet-jupiter-button {
+  position: absolute;
+  bottom: 23px;
+  left: 77px;
+  margin: 0 0;
+  padding: 0px 6px;
+  border: 0;
+  background: red;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 12px 0 #920606;
+          box-shadow: 0 12px 0 #920606;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.planet-jupiter-text-in-the-bottom {
+  margin: 0 0;
+  font-size: 65px;
+}
+
+.planet-jupiter-text-in-the-bottom {
+  -webkit-animation-name: lighting;
+          animation-name: lighting;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.planet-jupiter-ellipse:hover .planet-jupiter-button {
+  display: inherit;
+  -webkit-animation-name: button-appearing;
+          animation-name: button-appearing;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: forwards;
+          animation-iteration-count: forwards;
+}
+
+@keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.planet-jupiter-button:active {
+  -webkit-box-shadow: 0 4px 0 #920606;
+          box-shadow: 0 4px 0 #920606;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+/* <= text-in-the-window */
+.planet-saturn-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  -webkit-transform: skewY(14deg);
+          transform: skewY(14deg);
+}
+
+.planet-revers-skew {
+  -webkit-transform: skewY(-14deg);
+          transform: skewY(-14deg);
+}
+
+.planet-saturn-ellipse {
+  -webkit-animation-name: planet-saturn-ellipse;
+          animation-name: planet-saturn-ellipse;
+  -webkit-animation-duration: 107s;
+          animation-duration: 107s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-saturn-scaling {
+  -webkit-animation-name: planet-saturn-scaling;
+          animation-name: planet-saturn-scaling;
+  -webkit-animation-duration: 107s;
+          animation-duration: 107s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: relative;
+}
+
+.saturn {
+  width: 225px;
+  height: 225px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  background-image: url("../pictures/saturnExecuted.jpg");
+  -webkit-animation-name: planet-saturn-rotate-background;
+          animation-name: planet-saturn-rotate-background;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-svg-saturn {
+  position: fixed;
+  width: 855px;
+  height: 855px;
+  top: -528px;
+  left: -40px;
+  display: none;
+}
+
+.planet-saturn-ellipse:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-saturn-ellipse:hover .planet-saturn-scaling {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-saturn-ellipse:hover .planet-svg-saturn {
+  display: inherit;
+}
+
+@-webkit-keyframes planet-saturn-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@keyframes planet-saturn-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@-webkit-keyframes planet-saturn-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes planet-saturn-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes planet-saturn-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(520px) translateY(770px) rotate(0deg);
+            transform: rotate(0deg) translateX(520px) translateY(770px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(520px) translateY(770px) rotate(-360deg);
+            transform: rotate(360deg) translateX(520px) translateY(770px) rotate(-360deg);
+  }
+}
+
+@keyframes planet-saturn-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(520px) translateY(770px) rotate(0deg);
+            transform: rotate(0deg) translateX(520px) translateY(770px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(520px) translateY(770px) rotate(-360deg);
+            transform: rotate(360deg) translateX(520px) translateY(770px) rotate(-360deg);
+  }
+}
+
+/* lines => */
+.planet-saturn-curveLine-4-4,
+.planet-saturn-curveLine-3-4,
+.planet-saturn-curveLine-2-4,
+.planet-saturn-curveLine-1-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-saturn-appearingLine 1s linear forwards;
+          animation: planet-saturn-appearingLine 1s linear forwards;
+}
+
+.planet-saturn-oneLine {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-saturn-appearingLine 1s linear forwards;
+          animation: planet-saturn-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+}
+
+.planet-saturn-rectangleLongLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-saturn-appearingLine 1s linear forwards;
+          animation: planet-saturn-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-saturn-rectangleLongLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-saturn-appearingLine 1s linear forwards;
+          animation: planet-saturn-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.planet-saturn-rectangleShortLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-saturn-appearingLine 0.5s linear forwards;
+          animation: planet-saturn-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-saturn-rectangleShortLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-saturn-appearingLine 0.5s linear forwards;
+          animation: planet-saturn-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes planet-saturn-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes planet-saturn-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* <= lines */
+/* text-in-the-window => */
+.planet-saturn-text-in-the-window {
+  position: absolute;
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #4bdc87;
+  top: -370px;
+  left: 206px;
+  width: 304px;
+  height: 160px;
+  overflow: hidden;
+  display: none;
+}
+
+.planet-saturn-p-in-the-window {
+  font-size: 25px;
+  overflow: hidden;
+  border-right: 0.15em solid #4bdc87;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: none;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  display: none;
+}
+
+.planet-saturn-ellipse:hover .planet-saturn-text-in-the-window {
+  display: inherit;
+}
+
+.planet-saturn-ellipse:hover .planet-saturn-p-in-the-window {
+  display: inherit;
+  -webkit-animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+.planet-saturn-button {
+  position: absolute;
+  bottom: 23px;
+  left: 60px;
+  margin: 0 0;
+  padding: 0px 6px;
+  border: 0;
+  background: red;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 12px 0 #920606;
+          box-shadow: 0 12px 0 #920606;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.planet-saturn-text-in-the-bottom {
+  margin: 0 0;
+  font-size: 55px;
+}
+
+.planet-saturn-text-in-the-bottom {
+  -webkit-animation-name: lighting;
+          animation-name: lighting;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.planet-saturn-ellipse:hover .planet-saturn-button {
+  display: inherit;
+  -webkit-animation-name: button-appearing;
+          animation-name: button-appearing;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: forwards;
+          animation-iteration-count: forwards;
+}
+
+@keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.planet-saturn-button:active {
+  -webkit-box-shadow: 0 4px 0 #920606;
+          box-shadow: 0 4px 0 #920606;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+/* <= text-in-the-window */
+.planet-uranus-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  -webkit-transform: skewY(14deg);
+          transform: skewY(14deg);
+}
+
+.planet-revers-skew {
+  -webkit-transform: skewY(-14deg);
+          transform: skewY(-14deg);
+}
+
+.planet-uranus-ellipse {
+  -webkit-animation-name: planet-uranus-ellipse;
+          animation-name: planet-uranus-ellipse;
+  -webkit-animation-duration: 306s;
+          animation-duration: 306s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-uranus-scaling {
+  -webkit-animation-name: planet-uranus-scaling;
+          animation-name: planet-uranus-scaling;
+  -webkit-animation-duration: 306s;
+          animation-duration: 306s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: relative;
+}
+
+.uranus {
+  width: 190px;
+  height: 190px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  background-image: url("../pictures/uranusExecuted.jpg");
+  -webkit-animation-name: planet-uranus-rotate-background;
+          animation-name: planet-uranus-rotate-background;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-svg-uranus {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  top: -434px;
+  left: -31px;
+  display: none;
+}
+
+.planet-uranus-ellipse:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-uranus-ellipse:hover .planet-uranus-scaling {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-uranus-ellipse:hover .planet-svg-uranus {
+  display: inherit;
+}
+
+@-webkit-keyframes planet-uranus-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@keyframes planet-uranus-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@-webkit-keyframes planet-uranus-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes planet-uranus-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes planet-uranus-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(610px) translateY(880px) rotate(0deg);
+            transform: rotate(0deg) translateX(610px) translateY(880px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(610px) translateY(880px) rotate(-360deg);
+            transform: rotate(360deg) translateX(610px) translateY(880px) rotate(-360deg);
+  }
+}
+
+@keyframes planet-uranus-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(610px) translateY(880px) rotate(0deg);
+            transform: rotate(0deg) translateX(610px) translateY(880px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(610px) translateY(880px) rotate(-360deg);
+            transform: rotate(360deg) translateX(610px) translateY(880px) rotate(-360deg);
+  }
+}
+
+/* lines => */
+.planet-uranus-curveLine-4-4,
+.planet-uranus-curveLine-3-4,
+.planet-uranus-curveLine-2-4,
+.planet-uranus-curveLine-1-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-uranus-appearingLine 1s linear forwards;
+          animation: planet-uranus-appearingLine 1s linear forwards;
+}
+
+.planet-uranus-oneLine {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-uranus-appearingLine 1s linear forwards;
+          animation: planet-uranus-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+}
+
+.planet-uranus-rectangleLongLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-uranus-appearingLine 1s linear forwards;
+          animation: planet-uranus-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-uranus-rectangleLongLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-uranus-appearingLine 1s linear forwards;
+          animation: planet-uranus-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.planet-uranus-rectangleShortLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-uranus-appearingLine 0.5s linear forwards;
+          animation: planet-uranus-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-uranus-rectangleShortLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-uranus-appearingLine 0.5s linear forwards;
+          animation: planet-uranus-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes planet-uranus-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes planet-uranus-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* <= lines */
+/* text-in-the-window => */
+.planet-uranus-text-in-the-window {
+  position: absolute;
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #4bdc87;
+  top: -304px;
+  left: 170px;
+  width: 250px;
+  height: 130px;
+  overflow: hidden;
+  display: none;
+}
+
+.planet-uranus-p-in-the-window {
+  font-size: 25px;
+  overflow: hidden;
+  border-right: 0.15em solid #4bdc87;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: none;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  display: none;
+}
+
+.planet-uranus-ellipse:hover .planet-uranus-text-in-the-window {
+  display: inherit;
+}
+
+.planet-uranus-ellipse:hover .planet-uranus-p-in-the-window {
+  display: inherit;
+  -webkit-animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+.planet-uranus-button {
+  position: absolute;
+  bottom: 10px;
+  left: 48px;
+  margin: 0 0;
+  padding: 0px 6px;
+  border: 0;
+  background: red;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 0 #920606;
+          box-shadow: 0 6px 0 #920606;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.planet-uranus-text-in-the-bottom {
+  margin: 0 0;
+  font-size: 44px;
+}
+
+.planet-uranus-text-in-the-bottom {
+  -webkit-animation-name: lighting;
+          animation-name: lighting;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.planet-uranus-ellipse:hover .planet-uranus-button {
+  display: inherit;
+  -webkit-animation-name: button-appearing;
+          animation-name: button-appearing;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: forwards;
+          animation-iteration-count: forwards;
+}
+
+@keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.planet-uranus-button:active {
+  -webkit-box-shadow: 0 2px 0 #920606;
+          box-shadow: 0 2px 0 #920606;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+/* <= text-in-the-window */
+.planet-neptune-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  -webkit-transform: skewY(14deg);
+          transform: skewY(14deg);
+}
+
+.planet-revers-skew {
+  -webkit-transform: skewY(-14deg);
+          transform: skewY(-14deg);
+}
+
+.planet-neptune-ellipse {
+  -webkit-animation-name: planet-neptune-ellipse;
+          animation-name: planet-neptune-ellipse;
+  -webkit-animation-duration: 601s;
+          animation-duration: 601s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-neptune-scaling {
+  -webkit-animation-name: planet-neptune-scaling;
+          animation-name: planet-neptune-scaling;
+  -webkit-animation-duration: 601s;
+          animation-duration: 601s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: relative;
+}
+
+.neptune {
+  width: 190px;
+  height: 190px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  background-image: url("../pictures/neptuneExecuted.jpg");
+  -webkit-animation-name: planet-neptune-rotate-background;
+          animation-name: planet-neptune-rotate-background;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-svg-neptune {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  top: -434px;
+  left: -31px;
+  display: none;
+}
+
+.planet-neptune-ellipse:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-neptune-ellipse:hover .planet-neptune-scaling {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-neptune-ellipse:hover .planet-svg-neptune {
+  display: inherit;
+}
+
+@-webkit-keyframes planet-neptune-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@keyframes planet-neptune-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@-webkit-keyframes planet-neptune-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes planet-neptune-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes planet-neptune-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(690px) translateY(1010px) rotate(0deg);
+            transform: rotate(0deg) translateX(690px) translateY(1010px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(690px) translateY(1010px) rotate(-360deg);
+            transform: rotate(360deg) translateX(690px) translateY(1010px) rotate(-360deg);
+  }
+}
+
+@keyframes planet-neptune-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(690px) translateY(1010px) rotate(0deg);
+            transform: rotate(0deg) translateX(690px) translateY(1010px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(690px) translateY(1010px) rotate(-360deg);
+            transform: rotate(360deg) translateX(690px) translateY(1010px) rotate(-360deg);
+  }
+}
+
+/* lines => */
+.planet-neptune-curveLine-4-4,
+.planet-neptune-curveLine-3-4,
+.planet-neptune-curveLine-2-4,
+.planet-neptune-curveLine-1-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-neptune-appearingLine 1s linear forwards;
+          animation: planet-neptune-appearingLine 1s linear forwards;
+}
+
+.planet-neptune-oneLine {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-neptune-appearingLine 1s linear forwards;
+          animation: planet-neptune-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+}
+
+.planet-neptune-rectangleLongLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-neptune-appearingLine 1s linear forwards;
+          animation: planet-neptune-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-neptune-rectangleLongLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-neptune-appearingLine 1s linear forwards;
+          animation: planet-neptune-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.planet-neptune-rectangleShortLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-neptune-appearingLine 0.5s linear forwards;
+          animation: planet-neptune-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-neptune-rectangleShortLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-neptune-appearingLine 0.5s linear forwards;
+          animation: planet-neptune-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes planet-neptune-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes planet-neptune-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* <= lines */
+/* text-in-the-window => */
+.planet-neptune-text-in-the-window {
+  position: absolute;
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #4bdc87;
+  top: -304px;
+  left: 170px;
+  width: 250px;
+  height: 130px;
+  overflow: hidden;
+  display: none;
+}
+
+.planet-neptune-p-in-the-window {
+  font-size: 27px;
+  overflow: hidden;
+  border-right: 0.15em solid #4bdc87;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: none;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  display: none;
+}
+
+.planet-neptune-ellipse:hover .planet-neptune-text-in-the-window {
+  display: inherit;
+}
+
+.planet-neptune-ellipse:hover .planet-neptune-p-in-the-window {
+  display: inherit;
+  -webkit-animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+.planet-neptune-button {
+  position: absolute;
+  bottom: 10px;
+  left: 48px;
+  margin: 0 0;
+  padding: 0px 6px;
+  border: 0;
+  background: red;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 0 #920606;
+          box-shadow: 0 6px 0 #920606;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.planet-neptune-text-in-the-bottom {
+  margin: 0 0;
+  font-size: 44px;
+}
+
+.planet-neptune-text-in-the-bottom {
+  -webkit-animation-name: lighting;
+          animation-name: lighting;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.planet-neptune-ellipse:hover .planet-neptune-button {
+  display: inherit;
+  -webkit-animation-name: button-appearing;
+          animation-name: button-appearing;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: forwards;
+          animation-iteration-count: forwards;
+}
+
+@keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.planet-neptune-button:active {
+  -webkit-box-shadow: 0 2px 0 #920606;
+          box-shadow: 0 2px 0 #920606;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+/* <= text-in-the-window */
+html {
+  cursor: url(../pictures/forCursor1.cur), auto;
+}
+
+#theMainBox {
+  position: absolute;
+  top: -10px;
+  left: -16px;
+  width: 120%;
+  height: 110%;
+  overflow: hidden;
+}
+
+.box {
+  width: 99px;
+  height: 99px;
+  /*margin: 1px 0px 0px 1px;*/
+  background-color: black;
+  float: left;
+  position: relative;
+}
+
+.for-star {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  /* */
+  /* transform: scale(0.1); */
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  /* */
+}
+
+.for-small-part,
+.for-big-part,
+.for-round-part {
+  position: absolute;
+  fill: green;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+.for-round-part {
+  padding-bottom: 11px;
+  /* filter: blur(2px); */
+}
+/*# sourceMappingURL=forStar.css.map */

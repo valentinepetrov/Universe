@@ -1,0 +1,28 @@
+$colors : (
+    1  : red,
+    2  : rgb(255, 95, 122),
+    3  : rgb(255, 0, 234),
+    4  : orange,
+    5  : rgb(255, 206, 115),
+    6  : yellow,
+    7  : rgb(224, 248, 4),
+    8  : green,
+    9  : rgb(0, 255, 0),
+    10 : blue,
+    11 : rgb(144, 144, 255),
+    12 : rgb(0, 197, 246),
+    13 : rgb(7, 226, 255),
+    14 : purple,
+    15 : rgb(255, 0, 234),
+    16 : white,
+    17 : white,
+    18 : white,
+    19 : white,
+    20 : white,
+    21 : white,
+);
+
+@function randomColor($min, $max) {
+    @return floor( random()*( max($min, $max) - min($min, $max) + 1 ) + min($min, $max)) ;
+};
+

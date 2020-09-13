@@ -1,0 +1,13 @@
+.the-sun {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  top: 45vh;
+  left: 45vw;
+  background-image: url(../pictures/theSun3.gif);
+  background-size: cover;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=forSun.css.map */

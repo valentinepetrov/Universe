@@ -1,0 +1,74 @@
+/*
+@for $i from 0 through 10 { 
+
+    .big-part-g-#{$i} {
+        animation-name: big-part-g-#{$i};
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-delay: randomNumber(1, 5)s;
+    };
+    
+    .small-part-g-#{$i} {    
+        animation-name: small-part-g-#{$i};
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-delay: randomNumber(5, 10)s;
+
+    };
+    
+    .round-part-g-#{$i} {
+        animation-name: round-part-g-#{$i};
+        animation-duration: 10s;
+        animation-iteration-count: infinite;     
+        //padding-bottom: #{$i}px;   
+    };
+
+    @keyframes big-part-g-#{$i} {
+        0% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+            opacity: 1;
+        }    
+        50% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+            opacity: 0;
+        }
+        100% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+            opacity: 1;
+        }
+    }
+     
+    @keyframes small-part-g-#{$i} {
+        0% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+            opacity: 0;
+        }    
+        50% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+            opacity: 1;
+        }
+        100% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+            opacity: 0;
+        }
+    } 
+
+    @keyframes round-part-g-#{$i} {
+        0% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+        }  
+        25% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+        }      
+        50% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+        }
+        75% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+        }    
+        100% {
+            fill: map-get( $colors,  randomNumber(1, 17) );
+        }
+    } 
+} 
+*/

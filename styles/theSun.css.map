@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACL,QAAQ,EAAE,KAAK;EACf,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,GAAG,EAAE,IAAI;EACT,IAAI,EAAE,IAAI;EACV,gBAAgB,EAAE,4BAA4B;EAC9C,eAAe,EAAE,KAAK;EACtB,UAAU,EAAE,0CAA0C;EACtD,aAAa,EAAE,GAAG;CACrB",
+    "sources": [
+        "theSun.scss"
+    ],
+    "names": [],
+    "file": "theSun.css"
+}

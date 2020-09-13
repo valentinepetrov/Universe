@@ -1,0 +1,60 @@
+@import "./resets.scss";
+@import "./colors.scss";
+@import "./forAssistant.scss";
+@import "./theSun.scss";
+@import "./mercury.scss";
+@import "./venus.scss";
+@import "./earth.scss";
+@import "./mars.scss";
+@import "./jupiter.scss";
+@import "./saturn.scss";
+@import "./uranus.scss";
+@import "./neptune.scss";
+
+html {
+    cursor: url(../pictures/forCursor1.cur), auto;
+}
+
+#theMainBox {
+    position: absolute;
+    top: -10px;
+    left: -16px;
+    width: 120%;
+    height: 110%;
+    overflow: hidden;
+}
+
+.box {
+    width: 99px;
+    height: 99px;
+    /*margin: 1px 0px 0px 1px;*/
+    background-color: black;
+    float: left;
+    position: relative;
+}
+
+.for-star {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* */
+    /* transform: scale(0.1); */
+    filter: blur(1px);
+    /* */
+}
+
+.for-small-part,
+.for-big-part,
+.for-round-part {
+    position: absolute;
+    fill: green;
+    transform: scale(0.6);
+}
+
+.for-round-part {
+    padding-bottom: 11px;
+    /* filter: blur(2px); */
+}

@@ -1,0 +1,64 @@
+/* for assistant => */
+
+.assistant {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 30vw;
+    height: 38vh;
+    max-width: 550px;
+    max-height: 600px;
+    overflow: hidden;
+    background-image: url("../pictures/theMainframe.svg");
+    background-size: cover;
+    padding-top: 5vh;
+    padding-right: 2vw;
+    padding-bottom: 5vh;
+    padding-left: 2vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.assistant-text {
+    font-family: "vanbergerstencil", Arial, sans-serif;
+    color: #b7deec;
+    margin-left: 2vw;
+    overflow: hidden;
+}
+
+.e-v-e {
+    width: 150px;
+    min-width: 150px;
+    height: 250px;
+    min-height: 250px;
+    background-image: url("../pictures/assistant2.gif");
+    background-position: top center;
+    box-shadow: 0 0 20px 5px #b7deec inset, 0 0 20px 2px #b7deec;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+@media only all and (max-height: 900px) {
+    .e-v-e {
+        height: 180px;
+        min-height: 150px;
+    }
+}
+
+@media only all and (max-width: 1280px) {
+    .e-v-e {
+        display: none;
+    }
+
+    .assistant {
+        padding-left: 8vw;
+    }
+}
+
+@media only all and (max-width: 640px) {
+    .assistant {
+        display: none;
+    }
+}
+
+/* <= for assistant */

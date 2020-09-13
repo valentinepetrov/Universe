@@ -1,0 +1,426 @@
+.planet-mars-main {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  -webkit-transform: skewY(14deg);
+          transform: skewY(14deg);
+}
+
+.planet-revers-skew {
+  -webkit-transform: skewY(-14deg);
+          transform: skewY(-14deg);
+}
+
+.planet-mars-ellipse {
+  -webkit-animation-name: planet-mars-ellipse;
+          animation-name: planet-mars-ellipse;
+  -webkit-animation-duration: 68.7s;
+          animation-duration: 68.7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-mars-scaling {
+  -webkit-animation-name: planet-mars-scaling;
+          animation-name: planet-mars-scaling;
+  -webkit-animation-duration: 68.7s;
+          animation-duration: 68.7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: relative;
+}
+
+.mars {
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+          box-shadow: 0 0 20px 5px #000 inset, 0 0 20px 2px #000;
+  background-image: url("../pictures/marsExecuted.jpg");
+  -webkit-animation-name: planet-mars-rotate-background;
+          animation-name: planet-mars-rotate-background;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.planet-svg-mars {
+  position: fixed;
+  width: 285px;
+  height: 285px;
+  top: -175px;
+  left: 0px;
+  display: none;
+}
+
+.planet-mars-ellipse:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-mars-ellipse:hover .planet-mars-scaling {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.planet-mars-ellipse:hover .planet-svg-mars {
+  display: inherit;
+}
+
+@-webkit-keyframes planet-mars-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@keyframes planet-mars-rotate-background {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 320px;
+  }
+}
+
+@-webkit-keyframes planet-mars-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes planet-mars-scaling {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes planet-mars-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(420px) translateY(460px) rotate(0deg);
+            transform: rotate(0deg) translateX(420px) translateY(460px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(420px) translateY(460px) rotate(-360deg);
+            transform: rotate(360deg) translateX(420px) translateY(460px) rotate(-360deg);
+  }
+}
+
+@keyframes planet-mars-ellipse {
+  from {
+    -webkit-transform: rotate(0deg) translateX(420px) translateY(460px) rotate(0deg);
+            transform: rotate(0deg) translateX(420px) translateY(460px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(420px) translateY(460px) rotate(-360deg);
+            transform: rotate(360deg) translateX(420px) translateY(460px) rotate(-360deg);
+  }
+}
+
+/* lines => */
+.planet-mars-curveLine-4-4,
+.planet-mars-curveLine-3-4,
+.planet-mars-curveLine-2-4,
+.planet-mars-curveLine-1-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 1s linear forwards;
+          animation: planet-mars-appearingLine 1s linear forwards;
+}
+
+.planet-mars-oneLine {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 1s linear forwards;
+          animation: planet-mars-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+}
+
+.planet-mars-rectangleLongLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 1s linear forwards;
+          animation: planet-mars-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-mars-rectangleLongLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 1s linear forwards;
+          animation: planet-mars-appearingLine 1s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.planet-mars-rectangleShortLine-1-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 0.5s linear forwards;
+          animation: planet-mars-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.planet-mars-rectangleShortLine-2-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: planet-mars-appearingLine 0.5s linear forwards;
+          animation: planet-mars-appearingLine 0.5s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes planet-mars-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes planet-mars-appearingLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* <= lines */
+/* text-in-the-window => */
+.planet-mars-text-in-the-window {
+  position: absolute;
+  font-family: "vanbergerstencil", Arial, sans-serif;
+  color: #4bdc87;
+  top: -123px;
+  left: 81px;
+  width: 101px;
+  height: 55px;
+  overflow: hidden;
+  display: none;
+}
+
+.planet-mars-p-in-the-window {
+  font-size: 11px;
+  overflow: hidden;
+  border-right: 0.15em solid #4bdc87;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: none;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  display: none;
+}
+
+.planet-mars-ellipse:hover .planet-mars-text-in-the-window {
+  display: inherit;
+}
+
+.planet-mars-ellipse:hover .planet-mars-p-in-the-window {
+  display: inherit;
+  -webkit-animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: p-appearing 2.1s linear forwards, typing 2s 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@-webkit-keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes p-appearing {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4bdc87;
+  }
+}
+
+.planet-mars-button {
+  position: absolute;
+  bottom: 7px;
+  left: 21px;
+  margin: 0 0;
+  padding: 0px 6px;
+  border: 0;
+  background: red;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 0 #920606;
+          box-shadow: 0 3px 0 #920606;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.planet-mars-text-in-the-bottom {
+  margin: 0 0;
+  font-size: 16px;
+}
+
+.planet-mars-text-in-the-bottom {
+  -webkit-animation-name: lighting;
+          animation-name: lighting;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.planet-mars-ellipse:hover .planet-mars-button {
+  display: inherit;
+  -webkit-animation-name: button-appearing;
+          animation-name: button-appearing;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: forwards;
+          animation-iteration-count: forwards;
+}
+
+@-webkit-keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes button-appearing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #fd7878;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.planet-mars-button:active {
+  -webkit-box-shadow: 0 1px 0 #920606;
+          box-shadow: 0 1px 0 #920606;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+/* <= text-in-the-window */
+/*# sourceMappingURL=mars.css.map */
